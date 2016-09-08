@@ -1,0 +1,156 @@
+{
+  "name": "ng2-ui-auth-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compileClient": "cd ./client && typings install && tsc",
+    "compileServer": "cd ./server && typings install && tsc",
+    "server": "npm i && npm run compileServer && node server/src/server.js",
+    "client": "npm i && jspm install && npm run compileClient",
+    "ionic2": "cd ./ionic2 && npm run ionic2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronzeidman/ng2-ui-auth-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronzeidman/ng2-ui-auth-example/issues"
+  },
+  "homepage": "https://github.com/ronzeidman/ng2-ui-auth-example#readme",
+  "devDependencies": {
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "@angular/core": "^2.0.0-rc.4",
+    "@angular/forms": "^0.2.0",
+    "@angular/http": "^2.0.0-rc.4",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
+    "@angular/router": "^3.0.0-beta.2",
+    "jspm": "^0.17.0-beta.22",
+    "ng2-ui-auth": "^3.2.2",
+    "rxjs": "^5.0.0-beta.6",
+    "typescript": "^2.0.0-dev.20160702",
+    "typings": "^1.3.1",
+    "zone.js": "^0.6.12"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "bcryptjs": "^2.3.0",
+    "bluebird": "^3.3.1",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "cors": "^2.7.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
+    "jsonwebtoken": "^7.0.1",
+    "lodash": "^4.4.0",
+    "longjohn": "^0.2.11",
+    "morgan": "^1.6.1",
+    "request-promise": "^3.0.0",
+    "rethinkdbdash": "^2.2.17"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
+    "name": "ng2-ui-auth-example",
+    "main": "client\\src\\bootstrap.js",
+    "configFiles": {
+      "jspm": "client/jspm.config.js"
+    },
+    "dependencies": {
+      "@angular/forms": "npm:@angular/forms@^0.2.0",
+      "@angular/router": "npm:@angular/router@^3.0.0-beta.2",
+      "ng2-ui-auth": "npm:ng2-ui-auth@^3.2.2",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.3"
+    },
+    "devDependencies": {},
+    "peerDependencies": {
+      "@angular/common": "npm:@angular/common@^2.0.0-rc.4",
+      "@angular/compiler": "npm:@angular/compiler@^2.0.0-rc.4",
+      "@angular/core": "npm:@angular/core@^2.0.0-rc.4",
+      "@angular/http": "npm:@angular/http@^2.0.0-rc.4",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.0.0-rc.4",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.0-rc.4",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "rxjs": "npm:rxjs@5.0.0-beta.6",
+      "zone.js": "npm:zone.js@^0.6.6"
+    },
+    "overrides": {
+      "npm:@angular/common@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/compiler@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/core@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/http@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/platform-browser-dynamic@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/platform-browser@2.0.0-rc.4": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:reflect-metadata@0.1.3": {
+        "jspmNodeConversion": false,
+        "map": {
+          "crypto": {
+            "node": "@node/crypto",
+            "default": "@empty"
+          }
+        }
+      }
+    }
+  }
+}
